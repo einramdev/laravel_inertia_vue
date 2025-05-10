@@ -1,5 +1,9 @@
+<script setup>
+
+</script>
+
 <template>
     <div>
-        Hello !
+        Hello world!
     </div>
 </template>
