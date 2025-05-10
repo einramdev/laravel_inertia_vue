@@ -13,6 +13,6 @@ const props = defineProps({
 
     <Head title="About" />
         <div>
-            <h1>About page. Hello {{ user }}</h1>
+            <h1>About page. Hello {{ $page.props.auth.user }}</h1>
         </div>
 </template>
