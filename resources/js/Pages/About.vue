@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from "vue";
 
 const props = defineProps({
      user: {
@@ -11,7 +10,9 @@ const props = defineProps({
 </script>
 
 <template>
-    <div>
-        <h1>About page. Hello {{ user }}</h1>
-    </div>
+
+    <Head title="About" />
+        <div>
+            <h1>About page. Hello {{ user }}</h1>
+        </div>
 </template>
