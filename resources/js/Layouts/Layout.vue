@@ -4,11 +4,13 @@
 
 <template>
     <div>
-        <header class="bg-indigo-500 text-white">
-            <nav class="flex items-center justify-between p-4 max-wscreen-lg mx-auto">
+        <header class="bg-slate-800 shadow-md">
+            <nav class="p-5 max-w-screen-lg mx-auto flex items-center justify-between">
                 <div class="space-x-6">
-                    <Link :href="route('home')">Home</Link>
-                    <Link :href="route('about')">About</Link>
+                    <Link :href="route('home')" class="font-semibold text-white hover:text-blue-600">Home</Link>
+                </div>
+                <div class="space-x-6">
+                    <Link :href="route('register')" class="font-semibold text-white hover:text-blue-600">Register</Link>
                 </div>
             </nav>
         </header>
@@ -18,3 +20,7 @@
         </main>
     </div>
 </template>
+
+<style lang="css" scoped>
+@reference "/home/einram/testworks/laravel_inertia_vue/resources/css/app.css";
+</style>

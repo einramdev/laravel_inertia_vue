@@ -4,7 +4,13 @@
 
 <template>
 
-    <Head :title="` | ${$page.component}`" />
+    <Head :title="` | ${$page.component}`"></Head>
         
-    <Link class="mt-[600px] block" href="/" preserve-scroll>Refresh</Link>
+    <h1>Home Page</h1>
 </template>
+
+
+<style lang="css" scoped>
+@reference "/home/einram/testworks/laravel_inertia_vue/resources/css/app.css";
+
+</style>
