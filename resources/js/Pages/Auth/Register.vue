@@ -1,5 +1,7 @@
 <script setup>
 import { useForm } from '@inertiajs/vue3';
+import TextInput from '../Components/TextInput.vue';
+
 
 const form = useForm({
     name: null,
@@ -24,32 +26,14 @@ const submit = () => {
 
     <div class="w-2/4 mx-auto">
         <form @submit.prevent="submit">
-            <div class="mb-6">
-                <label for="name">Name</label>
-                <input type="text" v-model="form.name" name="name" id="name"
-                    class="block w-full rounded-md border-0 p-2 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm bg-white">
-                <small>{{ form.errors.name }}</small>
-            </div>
+            <TextInput name="name" v-model="form.name" :message="form.errors.name" />
 
-            <div class="mb-6">
-                <label for="email">Email</label>
-                <input type="text" v-model="form.email" name="email" id="email"
-                    class="block w-full rounded-md border-0 p-2 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm bg-white">
-                <small>{{ form.errors.email }}</small>
-            </div>
+            <TextInput name="email" type="email" v-model="form.email" :message="form.errors.email" />
 
-            <div class="mb-6">
-                <label for="password">Password</label>
-                <input type="password" v-model="form.password" name="password" id="password"
-                    class="block w-full rounded-md border-0 p-2 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm bg-white">
-                <small>{{ form.errors.password }}</small>
-            </div>
+            <TextInput name="password" type="password" v-model="form.password" :message="form.errors.password" />
 
-            <div class="mb-6">
-                <label for="confirmpassword">Confirm Password</label>
-                <input type="password" v-model="form.password_confirmation" name="confirmpassword" id="confirmpassword"
-                    class="block w-full rounded-md border-0 p-2 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm bg-white">
-            </div>
+            <TextInput name="confirm password" type="password" v-model="form.password_confirmation" />
+
             <div>
                 <p class="text-slate-600 mb-2">Already a user? <a href="#" class="text-link">Login</a></p>
                 <button class="primary-btn" :disabled="form.processing">Register</button>
