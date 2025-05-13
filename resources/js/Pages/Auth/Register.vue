@@ -35,8 +35,10 @@ const submit = () => {
             <TextInput name="confirm password" type="password" v-model="form.password_confirmation" />
 
             <div>
-                <p class="text-slate-600 mb-2">Already a user? <a href="#" class="text-link">Login</a></p>
-                <button class="primary-btn" :disabled="form.processing">Register</button>
+                <p class="text-slate-600 mb-2">Already a user? <a :href="route('login')"
+                        class="font-semibold text-blue-500 hover:text-blue-600">Login</a></p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    :disabled="form.processing">Register</button>
             </div>
         </form>
     </div>

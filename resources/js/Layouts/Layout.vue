@@ -11,6 +11,7 @@
                 </div>
                 <div class="space-x-6">
                     <Link :href="route('register')" class="font-semibold text-white hover:text-blue-600">Register</Link>
+                    <Link :href="route('login')" class="font-semibold text-white hover:text-blue-600">Login</Link>
                 </div>
             </nav>
         </header>
