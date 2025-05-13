@@ -15,7 +15,11 @@
                     ]">Home
                     </Link>
                 </div>
-                <div v-if="$page.props.auth.user" class="space-x-6">
+                <div v-if="$page.props.auth.user" class="space-x-6 flex">
+
+                    <img :src="$page.props.auth.user.avatar ? ('storage/' + $page.props.auth.user.avatar) : ('storage/avatars/default-profile-cat.jpg')" alt=""
+                        class="w-8 h-8 rounded-full overflow-hidden object-center ob">
+
                     <Link :href="route('dashboard')" class="font-semibold text-white hover:text-blue-600" :class="[
                         route().current('dashboard')
                             ? 'bg-gray-900 text-white'
